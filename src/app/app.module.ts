@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, DoBootstrap, Injector } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -13,6 +14,15 @@ import { AppComponent } from './app.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule implements DoBootstrap {
+  constructor(private injector: Injector){
+    
+  }
+
+  ngDoBootstrap(){
+      const el = createCustomElement(AppComponent, {injector: this.injector});
+      customElements.define('app-list-people', el);
+  }
+ }
