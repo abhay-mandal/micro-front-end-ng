@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,11 @@ import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 })
 
 export class AppComponent implements OnInit, OnDestroy {
-  People: object[] = [
+
+  @Input() people: string;
+  @Output() helloEvt: EventEmitter<string> = new EventEmitter();
+  
+  People: any[] = [
     { name: 'Jeff Bejos' },
     { name: 'Elon Musk' },
     { name: 'Warren Buffett' },
@@ -15,12 +19,9 @@ export class AppComponent implements OnInit, OnDestroy {
     { name: 'Mukesh Ambani' }
   ];
 
-  @Input() people: object;
-
   ngOnInit() {
-    console.log("Token::", this.people);
-    this.People.push(this.people);
-    console.log("People::", this.People);
+    console.log("Input::", this.people);
+    this.People.push({name: this.people});
     window.addEventListener('app-post-ce-add-people', this.handleEventListnerPeople, true);
   }
 
@@ -35,6 +36,10 @@ export class AppComponent implements OnInit, OnDestroy {
     console.log('people', people);
     console.log('this.People', this.People);
     this.People.push(...people);    
+  }
+
+  sayHello(){
+    this.helloEvt.next();
   }
 
   ngOnDestroy(): void {
