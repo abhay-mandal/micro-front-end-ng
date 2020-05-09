@@ -1,15 +1,15 @@
-import { Component, Input, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-people',
+  templateUrl: './people.component.html',
+  styleUrls: ['./people.component.scss']
 })
+export class PeopleComponent implements OnInit, OnDestroy {
 
-export class AppComponent implements OnInit, OnDestroy {
-
-  // @Input() people: string;
-  // @Output() helloEvt: EventEmitter<string> = new EventEmitter();
+  constructor() { }
+  @Input() people: string;
+  @Output() helloEvt: EventEmitter<string> = new EventEmitter();
   
   People: any[] = [
     { name: 'Jeff Bejos', link: "/people/jeff-bejos" },
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit() {
-    // console.log("Input::", this.people);
-    // this.People.push({name: this.people});
+    console.log("Input::", this.people);
+    this.People.push({name: this.people});
     window.addEventListener('app-post-ce-add-people', this.handleEventListnerPeople, true);
   }
 
@@ -38,9 +38,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.People.push(...people);    
   }
 
-  // sayHello(){
-  //   this.helloEvt.next();
-  // }
+  sayHello(){
+    this.helloEvt.next();
+  }
 
   ngOnDestroy(): void {
     window.removeEventListener('app-post-ce-add-people', this.handleEventListnerPeople, true);
