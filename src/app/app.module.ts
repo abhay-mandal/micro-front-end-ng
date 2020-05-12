@@ -22,7 +22,8 @@ import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  // providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
+  providers: [],
   // bootstrap: [AppComponent]
   entryComponents: [
     AppComponent,
@@ -43,10 +44,12 @@ export class AppModule implements DoBootstrap {
     this.location.subscribe(data => {
       this.router.navigateByUrl(data.url);
     });
+
     const strategyFactory = new ElementZoneStrategyFactory(AppComponent, this.injector);
-    // const el = createCustomElement(AppComponent, { injector: this.injector });
-    const el = createCustomElement(PeopleComponent, { injector: this.injector, strategyFactory });
+    const el = createCustomElement(AppComponent, { injector: this.injector });
+    // const el = createCustomElement(PeopleComponent, { injector: this.injector, strategyFactory });
     customElements.define('app-list-people', el);
     // customElements.get('app-list-people') || customElements.define('app-list-people', el);
+    // this.router.initialNavigation();
   }
 }
