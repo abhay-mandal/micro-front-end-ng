@@ -16,10 +16,10 @@ export class AppComponent {
       path: 'app-list-people/main-es5.js',
       element: 'app-list-people'
     },
-    "app-login": {
+    "micro-app-login": {
       loaded: false,
       path: 'app-login/main-es5.js',
-      element: 'app-login'
+      element: 'micro-app-login'
     }
   };
 
@@ -27,7 +27,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.load('app-list-people');
-    // this.load('app-login');
+    this.load('micro-app-login');
   }
 
   load(name: string): void {
@@ -42,7 +42,7 @@ export class AppComponent {
     
     const element: HTMLElement = document.createElement(configItem.element);
     content.appendChild(element);
-    element.setAttribute('state', 'init');
+    // element.setAttribute('state', 'init');
 
     script.onerror = () => console.error(`error loading ${configItem.path}`);
 
