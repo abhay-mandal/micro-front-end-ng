@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ElementStateService } from './services/element-state.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { ElementStateService } from './services/element-state.service';
 export class AppComponent {
 
   title = 'base-app';
+  isBaseAppRoutes: boolean = true;
 
   config = {
     "app-list-people": {
@@ -23,9 +25,17 @@ export class AppComponent {
     }
   };
 
-  constructor(private stateService: ElementStateService){  }
+  constructor(private stateService: ElementStateService,
+    private router: Router
+  ){  }
 
   ngOnInit() {
+    console.log(this.router.url);
+    const url: string = this.router.url;
+    // if(url.includes('people')){
+
+    // }
+
     this.load('app-list-people');
     this.load('micro-app-login');
   }
@@ -34,7 +44,7 @@ export class AppComponent {
     const configItem = this.config[name];
     if (configItem.loaded) return;
 
-    const content = document.getElementById('container');
+    const content = document.getElementById('appContainer');
 
     const script = document.createElement('script');
     script.src = configItem.path;
@@ -42,6 +52,7 @@ export class AppComponent {
     
     const element: HTMLElement = document.createElement(configItem.element);
     content.appendChild(element);
+    configItem.loaded = true;
     // element.setAttribute('state', 'init');
 
     script.onerror = () => console.error(`error loading ${configItem.path}`);
