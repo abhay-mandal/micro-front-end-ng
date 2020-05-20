@@ -20,4 +20,8 @@ export class ElementStateService {
       client.setAttribute('state', state);
     }
   }
+
+  get getClients() {
+    return this.clients;
+  }
 }

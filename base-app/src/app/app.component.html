@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark p-0">
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">XACBANK</a>
-  
+
   <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -10,7 +10,8 @@
         <a class="nav-link" href="#">Profile</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Settings</a>
         <div class="dropdown-menu" aria-labelledby="dropdown01">
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
@@ -25,12 +26,11 @@
     <nav class="col-md-2 sidebar">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" href="#/app-people/list">People</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#/auth/login">Login</a>
-          </li>
+          <!-- <li class="nav-item"><a class="nav-link active" href="#/app-people/people">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/app-login/login">Login</a></li> -->
+          
+          <li class="nav-item"><a class="nav-link" href="javascript:void(0)" (click)="load('app-people')">People</a></li>
+          <li class="nav-item"><a class="nav-link" href="javascript:void(0)" (click)="load('app-login')">Login</a></li>
         </ul>
       </div>
     </nav>
@@ -38,16 +38,20 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-3">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-3">
         <div class="main-panel">
-          <ng-container *ngIf="isBaseAppRoutes; else microAppContainer">
+          <div id="appContainer">
+            <!-- Web Components go here -->
+          </div>
+
+          <!-- <ng-container *ngIf="isBaseAppRoutes; else microAppContainer">
             <div id="base-container">
               <h3>Dashboard</h3>
             </div>
           </ng-container>
           <ng-template #microAppContainer>
             <div id="appContainer">
-              <!-- Web Components go here -->
+               ---- Web Components go here ---
             </div>
-          </ng-template>
+          </ng-template> -->
         </div>
       </div>
     </main>
