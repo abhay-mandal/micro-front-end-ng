@@ -1,0 +1,13 @@
+    {
+        "BEARER_TOKEN": "d76b4327-832b-3030-adf4-32c8cd3317d3",
+        "APPZILLON_DIGITAL_BANKING": "APPZILLON_DIGITAL_BANKING",
+        "API_BODY": {
+            "DEVICE_ID": "WEB",
+            "TENANT_ID": "admin",
+            "APP_ID": "Admin",
+            "REQUEST_ID": "CSNONCE",
+            "OS": "WEB",
+            "EXTERNAL_REF_ID": "ab12sd13",
+            "REQ_ID": "PROC_2"
+        }
+    }

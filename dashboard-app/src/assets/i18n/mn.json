@@ -1,0 +1,41 @@
+{
+    "dashBoard":{
+        "primaryAccount" : " анхдагч данс",
+        "ViewBalance":" үлдэгдлийг харах",
+        "account":"данс",
+        "detailStatement":" нарийвчилсан мэдэгдэл",
+        "allAccounts":"бүх данс",
+        "transfer":"шилжүүлэх",
+        "cards":"картууд",
+        "payments":"төлбөр",
+        "saveTransaction":"хадгаламжийн гүйлгээ",
+        "only":"зөвхөн",
+        "shown":"харуулав",
+        "viewAll":"бүгдийг харах",
+        "mnt":" MNT ",
+        "usd":" USD ",
+        "xx":"xx ",
+        "xxxx":"xxxx "
+    },
+    "fundTransfer": {
+        "en": "Монгол", 
+        "whomToSend" : "whom to send",
+        "ownAccount" : "Own account",
+        "withinBank" : "Within bank",
+        "withinCountry" : "With in country",
+        "addpayeeLabel" : "Add Payee",
+        "payeeNeft" : "payee Neft",
+        "change" : "Change",
+        "internationalTransfer" : "International Transfer",
+        "changeAccount":"Change Account",
+        "otherAccount" : "other account",
+        "fromAccount":"From Account",
+        "networkType":"Network Type",
+        "accountHolderName":"Rahul Jadav",
+        "accountBalance":"78,5100.00",
+        "accountNo":"111225896475656685",
+        "searchPayee" :"search payee...",
+        "noDataAvailable" : "No data available",
+        "fundTransferLabel":"Fund Transfer"
+        }
+}

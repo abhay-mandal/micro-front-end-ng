@@ -1,0 +1,85 @@
+.language-btn{
+    border: 1px solid #D8D8D8;
+    color: #ababab;
+    border-radius: 10px;
+    height: 45px;
+    min-width: 85px;
+    padding-left: 1em;
+    padding-right: 1em;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.33em 0.857em;
+    font-size: 14px; 
+    background: transparent;
+}
+
+nav a {padding: 6px 12px;}
+
+.active{
+    color: #08182E;
+    border:1px solid #08182E;
+    font-weight: 400;
+}
+
+.iconBtn{
+    background-color: transparent;
+    border: 0px;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    transform: rotate(180deg);
+    padding: 0;
+    margin: 0;
+    min-width: auto;
+    margin-left: 20px;
+    color: #ffff;
+}
+.alignIconFont{
+    font-size: 26px;
+    color: #08182E;
+    vertical-align: middle;
+}
+.alignRight button:first-child {
+    margin-right: 21px;
+    margin-top:1px
+}
+.alignRight button:nth-child(2) {
+    margin-right: 7px;
+    margin-left: 1px;
+    
+}
+.alignRight button:focus {
+    outline: none;
+}
+
+.main-wrap .blue{
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none; 
+}
+span.alignIconFont svg {
+    transform: rotate(180deg);
+}
+.xaclogo{
+    height: 65px;
+}
+
+.dropdown-menu.show {
+    display: block;
+    position: absolute;
+    will-change: transform;
+    transform: translate(-147px, 40px);
+    border: 1px solid #D8D8D8;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 10px #00000033;
+    max-width: 300px;
+    background: #F5F5F5;
+    top: 8px !important;
+    left: auto !important;
+    box-shadow: 0px 3px 10px #00000033;
+    padding: 10px;
+    max-width: 300px;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+    background-color: #ffff;
+}

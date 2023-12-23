@@ -1,0 +1,391 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: 'Lato';
+	src: url('assets/fonts/Lato/Lato-Light.eot');
+	src: url('assets/fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato/Lato-Light.woff2') format('woff2'), url('assets/fonts/Lato/Lato-Light.woff') format('woff'), url('assets/fonts/Lato/Lato-Light.svg#Lato-Light') format('svg');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('assets/fonts/Lato/Lato-Regular.eot');
+	src: url('assets/fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato/Lato-Regular.woff2') format('woff2'), url('assets/fonts/Lato/Lato-Regular.woff') format('woff'), url('assets/fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('assets/fonts/Lato/Lato-Italic.eot');
+	src: url('assets/fonts/Lato/Lato-Italic.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato/Lato-Italic.woff2') format('woff2'), url('assets/fonts/Lato/Lato-Italic.woff') format('woff'), url('assets/fonts/Lato/Lato-Italic.svg#Lato-Italic') format('svg');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('assets/fonts/Lato/Lato-Bold.eot');
+	src: url('assets/fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato/Lato-Bold.woff2') format('woff2'), url('assets/fonts/Lato/Lato-Bold.woff') format('woff'), url('assets/fonts/Lato/Lato-Bold.svg#Lato-Bold') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url('assets/fonts/Lato/Lato-Black.eot');
+	src: url('assets/fonts/Lato/Lato-Black.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Lato/Lato-Black.woff2') format('woff2'), url('assets/fonts/Lato/Lato-Black.woff') format('woff'), url('assets/fonts/Lato/Lato-Black.svg#Lato-Black') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+/*common css */
+
+::ng-deep body {
+	font-family: 'Lato';
+	overflow: auto;
+}
+
+::ng-deep button:focus {
+	outline: none;
+}
+
+// ::ng-deep -webkit-scrollbar {
+// 	width: 6px;
+// 	height: 6px;
+// 	background-color: transparent;
+// }
+
+// ::ng-deep -webkit-scrollbar-track {
+// 	background-color: transparent
+// }
+
+// ::ng-deep -webkit-scrollbar-thumb {
+// 	border-radius: 10px;
+// 	background-color: #a6a6a6;
+// }
+
+::ng-deep svg {
+	width: 24px;
+	height: 24px;
+}
+
+::ng-deep .ett-inpt {
+	font-weight: 300;
+	font-size: 22px;
+}
+
+::ng-deep .ett-inpt:focus {
+	outline: none;
+}
+
+::ng-deep label {
+	font-size: 13px;
+	color: #FECB37;
+	font-weight: 300;
+	margin-bottom: 0px;
+	line-height: 12px
+}
+
+::ng-deep .blue {
+	position: relative
+}
+
+::ng-deep .blue::-webkit-scrollbar {
+	display: none;
+}
+
+::ng-deep .blue::-webkit-scrollbar-thumb {
+	background-color: #FF0000;
+}
+
+::ng-deep .blue::-webkit-scrollbar {
+	width: 0px !important;
+	height: 0px;
+	background-color: transparent;
+}
+
+::ng-deep .blue .aside-Left-width {
+	background-color: #22264C;
+	padding: 2.65em 2.1em;
+	box-shadow: 0 0 25px #0000004D;
+	position: relative;
+	height: calc(100vh - 128px);
+	overflow: auto;
+}
+
+::ng-deep .aside-Left-width .fa-arrow-left{
+	font-size: 18px;
+}
+
+::ng-deep svg.ett-icon.icon-warning {
+	width: 30px;
+	height: 30px;
+}
+
+::ng-deep .aside-Left-width {
+	width: 95%;
+	max-width: 418px;
+	margin-left: .3rem;
+}
+
+::ng-deep .aside-Left-width::-webkit-scrollbar {
+	display: none !important;
+}
+
+::ng-deep div.container-widthSet.mx-5.px-4.pt-3 {
+	padding-left: 1.05rem !important;
+	padding-right: 0rem !important;
+	padding-top: .66rem !important;
+}
+
+::ng-deep .login-header.mb-4 {
+	margin-bottom: 1.8rem !important
+}
+
+::ng-deep .headfont {
+	font-weight: 500;
+	font-size: 22px;
+	margin-bottom: .76em;
+}
+
+::ng-deep .aside-Button {
+	background-color: #FF6F20;
+	height: 50px;
+	width: 100%;
+	border: 0px;
+	border-radius: 10px;
+	color: #ffff;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+::ng-deep .btn:disabled {
+	cursor: not-allowed;
+}
+
+::ng-deep .btn:hover,
+ ::ng-deep .btn:disabled {
+	color: #fff;
+}
+
+::ng-deep .form-control:focus {
+	box-shadow: none
+}
+
+::ng-deep .right-Section {
+	padding-left: 23px;
+}
+
+::ng-deep .right-Section span {
+	font-family: "Lato";
+	color: #333;
+}
+
+::ng-deep .NumSpan span.ett-inpt.col-md-4 {
+	width: unset;
+	max-width: 65px;
+}
+
+::ng-deep span.inpFeild.col-md-10 {
+	padding-left: 4px;
+}
+
+::ng-deep .descriptionTxt {
+	line-height: 1.6em;
+	color: #08182E;
+	font-weight: 100;
+	font-size: 20px;
+	margin-top: 2.1em
+}
+
+::ng-deep .subHeaderTxt {
+	font-size: 55px;
+	font-weight: 100;
+	margin-top: 18px;
+	margin-bottom: 0.7em;
+	line-height: 1.286em;
+	color: inherit;
+	margin-bottom: 3px;
+	margin-top: 21px;
+}
+
+::ng-deep .welcomeTxt {
+	font-weight: 100;
+	line-height: 1.286em;
+	color: inherit;
+	margin: 0;
+	font-size: 21px;
+}
+
+::ng-deep .forgotPwd>div {
+	margin-bottom: 1em;
+}
+
+::ng-deep .mb-21 {
+	margin-bottom: 21px
+}
+
+::ng-deep .mb-18 {
+	margin-bottom: 18px
+}
+
+::ng-deep textarea {
+	resize: none;
+	height: 80px
+}
+
+// Toaster message css
+::ng-deep .toast-container {
+	z-index: 1;
+}
+
+ ::ng-deep {
+	@media (min-width: 993px) {
+		.toast-error, .toast-error, .toast-warning {
+			width: 38%;
+			max-width: 460px;
+			min-width: 460px;
+		}
+	}
+	.toast-bottom-left {
+		left: 4.5% !important;
+		position: absolute !important;
+		bottom: 0
+	}
+	.toast-container .ngx-toastr:hover {
+		box-shadow: unset;
+		opacity: 1;
+		cursor: pointer;
+	}
+	.toast-error {
+		bottom: 12px;
+		bottom: 0;
+		background-color: #ed1c48;
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+		padding: 1em;
+		z-index: 999;
+	}
+	.toast-error,
+	.toast-success,
+	.toast-warning {
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	@-webkit-keyframes toast-error {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@keyframes toast-error {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@-webkit-keyframes toast-success {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@keyframes toast-success {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@-webkit-keyframes toast-warning {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	@keyframes toast-warning {
+		from {
+			opacity: 0;
+			-webkit-transform: translate3d(0, 100%, 0);
+			transform: translate3d(0, 100%, 0);
+		}
+		to {
+			opacity: 1;
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	.toast-error {
+		-webkit-animation-name: toast-error;
+		animation-name: toast-error;
+		bottom: 0 !important;
+	}
+	.toast-success {
+		-webkit-animation-name: toast-success;
+		animation-name: toast-success;
+		bottom: 0 !important;
+	}
+	.toast-warning {
+		-webkit-animation-name: toast-warning;
+		animation-name: toast-warning;
+		bottom: 0 !important;
+	}
+	.toast-container .ngx-toastr:last-child {
+		margin-bottom: 0px;
+		border-radius: 12px 12px 0 0;
+	}
+}
+
+::ng-deep {
+	.toast-container .ngx-toastr {
+		overflow: hidden;
+		padding: 15px 15px 15px 72px;
+		border-radius: 12px;
+		border: 0;
+		background-position: 27px center;
+		background-repeat: no-repeat;
+		background-size: 30px;
+		box-shadow: unset !important;
+		color: #FFFFFF;
+	}
+	.toast-container .ngx-toastr>div {
+		color: #fff;
+		margin-bottom: 10px;
+		font-size: 17px;
+		font-weight: 300;
+		padding-left: 0;
+	}
+}

@@ -2,3 +2,52 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+
+/* Importing regular style toast . */
+@import '~ngx-toastr/toastr';
+
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/Lato/Lato-Light.eot');
+    src: url('assets/fonts/Lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/Lato/Lato-Light.woff2') format('woff2'),
+         url('assets/fonts/Lato/Lato-Light.woff') format('woff'),
+         url('assets/fonts/Lato/Lato-Light.svg#Lato-Light') format('svg');
+    font-weight: 100; font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/Lato/Lato-Regular.eot');
+    src: url('assets/fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+         url('assets/fonts/Lato/Lato-Regular.woff') format('woff'),
+         url('assets/fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: 300; font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/Lato/Lato-Italic.eot');
+    src: url('assets/fonts/Lato/Lato-Italic.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/Lato/Lato-Italic.woff2') format('woff2'),
+         url('assets/fonts/Lato/Lato-Italic.woff') format('woff'),
+         url('assets/fonts/Lato/Lato-Italic.svg#Lato-Italic') format('svg');
+     font-style: italic;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/Lato/Lato-Bold.eot');
+    src: url('assets/fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/Lato/Lato-Bold.woff2') format('woff2'),
+         url('assets/fonts/Lato/Lato-Bold.woff') format('woff'),
+         url('assets/fonts/Lato/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: 400; font-style: normal;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('assets/fonts/Lato/Lato-Black.eot');
+    src: url('assets/fonts/Lato/Lato-Black.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/Lato/Lato-Black.woff2') format('woff2'),
+         url('assets/fonts/Lato/Lato-Black.woff') format('woff'),
+         url('assets/fonts/Lato/Lato-Black.svg#Lato-Black') format('svg');
+    font-weight: 500; font-style: normal;
+}

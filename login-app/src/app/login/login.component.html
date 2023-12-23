@@ -1,0 +1,74 @@
+<div class="row m-0">
+    <div class="col-md-12 main-wrap">
+        <div class="row blue">
+            <div class="col-md-5 aside-Left-width">
+                <h5 class="headfont text-white d-inline-block">{{'login' | translate }}</h5>
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()" autocomplete="off">
+                    <div class="loginDiv">
+                        <div class="UserName mb-21">
+                            <label class="labelfont"> {{'enterUserID' | translate}} </label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text"
+                              required autocomplete="off" formControlName="userId" placeholder="{{'example123' | translate }}">
+                            <div *ngIf="form.userId.touched">
+                                <label class="text-danger" *ngIf="form.userId.hasError('required')">
+                                    {{'userIdAlert' | translate}}
+                                </label>         
+                            </div>
+                        </div>
+                        <div class="PassInp mb-21">
+                            <label class="d-block"> {{'enterPassword' | translate }} </label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0 form-control" required autocomplete="off"
+                                type="password" formControlName="password" placeholder="{{'example@1234' | translate }}"
+                                [type]="showValue ? 'text' : 'password'">
+                            <app-show-password (showPswd)="showLoginPassword($event, 'showValue')"></app-show-password>
+
+                            <div *ngIf="form.password.touched">
+                                <label class="text-danger" *ngIf="form.password.hasError('required')">
+                                  {{'passwordAlert' | translate}}
+                                </label>
+              
+                                <label class="text-danger" *ngIf="showValue && !form.password.errors">
+                                  {{'showPswdAlert' | translate }}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="loginBtn ">
+                            <button type="button" class="btn aside-Button w-100" [disabled]="loginForm.invalid || showValue"
+                                type="submit">{{'login' | translate }}
+                            </button>
+                        </div>
+                        <div class="row forgotDiv mb-21">
+                            <div class="col-md-6 p-0 text-left">
+                                <button type="button" class=" btn forgotUser" (click)='forgotUserId()'>
+                                    <span id="">{{'forgotUser' | translate }}</span>
+                                </button>
+                            </div>
+                            <div class="col-md-6 p-0 text-right">
+                                <button type="button" class="btn forgotPswd" (click)='forgotPswd()'>
+                                    <span id="">{{'forgotPswd' | translate }}</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-12 registerTxt mb-21">
+                            <span>{{'noUserId' | translate }} <a class="registerLink"
+                                    [routerLink]="'/app-login/register'">{{'registerTxt' | translate }}</a></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7  mr-0 pr-0 right-Section" id="rightSection ">
+                <h3 class="welcomeTxt m-0"><span>{{'welcomeText' | translate }}</span></h3>
+                <h2 class="subHeaderTxt d-block w-100"><span>{{'firstPara' | translate }}</span></h2>
+                <h4 class="descriptionTxt"><span>{{'secondPara' | translate }}</span></h4>
+                <div class="row mx-0 px-0">
+                    <div class="col-md-12 mr-0 pr-0 text-right">
+                        <button type="button" class="openButton mr-0 " [routerLink]="'/app-login/open-new-account'">
+                            <span id="">{{'openAccount' | translate }}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

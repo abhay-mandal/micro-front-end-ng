@@ -1,0 +1,172 @@
+<div class="row m-0">
+    <div class="col-md-12 main-wrap">
+        <div class="row blue">
+            <div class="col-md-5 aside-Left-width">
+                <h5 class="headfont text-white d-inline-block">{{'register' | translate }}</h5>
+                <div class="text-white d-inline-block float-right px-1" (click)="goBackToLogin()"><i class="fa fa-arrow-left" aria-hidden="true"></i></div>
+                <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                    <div class="registerRow">
+                        <!-- <div class="form-group mb-21"> 
+                            <label class="d-block">{{'smsRequiredPhone1' | translate }}</label>
+                            <div class="yesRno-Chk text-white">
+                                <span class="chkContaier">
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="phone1Yes"
+                                            formControlName="isSmsPhone1" value="Y">
+                                        <label for="phone1Yes" class="mb-0 ">{{'yes' | translate }}</label>
+                                    </span>
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="phone1No"
+                                            formControlName="isSmsPhone1" value="N">
+                                        <label for="phone1No" class="mb-0">{{'no' | translate }}</label>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'smsRequiredPhone2' | translate }}</label>
+                            <div class="yesRno-Chk text-white">
+                                <span class="chkContaier">
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="phone2Yes"
+                                            formControlName="isSmsPhone2" value="Y">
+                                        <label for="phone2Yes" class="mb-0">{{'yes' | translate }}</label>
+                                    </span>
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="phone2No"
+                                            formControlName="isSmsPhone2" value="N">
+                                        <label for="phone2No" class="mb-0">{{'no' | translate }}</label>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'ussdRequired' | translate }}</label>
+                            <div class="yesRno-Chk text-white">
+                                <span class="chkContaier">
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="ussdYes" formControlName="isUssd"
+                                            value="Y">
+                                        <label for="ussdYes" class="mb-0">{{'yes' | translate }}</label>
+                                    </span>
+                                    <span>
+                                        <input class="checkbox-round m-0 p-0 border-0" type="radio" id="ussdNo" formControlName="isUssd"
+                                            value="N">
+                                        <label for="ussdNo" class="mb-0">{{'no' | translate }}</label>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'extIdentifier' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="extIdentifier"
+                                placeholder=" {{'extIdentifier' | translate }}">
+                        </div> -->
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'phone1' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="phone1" maxlength="10" (keypress)= mobileNumValidator($event) 
+                                placeholder=" {{'phone1' | translate }}">
+                        </div>
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'email1' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="email1"
+                                placeholder=" {{'email1' | translate }}">
+                        </div>
+
+                        <!-- <div class="form-group mb-21">
+                            <label class="d-block">{{'phone2' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="phone2" maxlength="10" (keypress)= mobileNumValidator($event) 
+                                placeholder=" {{'phone2' | translate }}">
+                        </div>
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'email2' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="email2"
+                                placeholder=" {{'email2' | translate }}">
+                        </div> -->
+
+                        <!-- <div class="form-group mb-21">
+                            <label class="d-block">{{'addr1' | translate }}</label>
+                            <textarea class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0 textarea" type="text" rows="1" formControlName="addr1"
+                                placeholder=" {{'addr1' | translate }}"></textarea>
+                        </div>
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'addr2' | translate }}</label>
+                            <textarea class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0 textarea" type="text" rows="1" formControlName="addr2"
+                                placeholder=" {{'addr2' | translate }}"></textarea>
+                        </div> -->
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'userId' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="userId"
+                                placeholder=" {{'userId' | translate }}">
+                        </div>
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'userName' | translate }}</label>
+                            <input class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0" type="text" formControlName="userName"
+                                placeholder=" {{'userName' | translate }}">
+                        </div>
+
+                        <!-- <div class="form-group mb-21">
+                            <label class="d-block mb-3">{{'dob' | translate }}</label>
+                            <div class="input-group">
+                                <input class="form-control dob-box" placeholder="yyyy-mm-dd" ngbDatepicker
+                                    #d="ngbDatepicker" formControlName="dateOfBirth" />
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                        type="button">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'secondarySmsRequired' | translate }}</label>
+                            <div class="yesRno-Chk text-white">
+                                <span class="chkContaier">
+                                    <span>
+                                        <input class="checkbox-round" type="radio" id="secSmsYes"
+                                            formControlName="isSecSms" value="Y">
+                                        <label for="secSmsYes">{{'yes' | translate }}</label>
+                                    </span>
+                                    <span>
+                                        <input class="checkbox-round" type="radio" id="secSmsNo"
+                                            formControlName="isSecSms" value="N">
+                                        <label for="secSmsNo">{{'no' | translate }}</label>
+                                    </span>
+                                </span>
+                            </div>
+                        </div> -->
+
+                        <div class="form-group mb-21">
+                            <label class="d-block">{{'addInfo1' | translate }}</label>
+                            <textarea class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0 textarea" type="text" rows="1" formControlName="addInfo1"
+                                placeholder=" {{'addInfo1' | translate }}"></textarea>
+                        </div>
+
+                        <!-- <div class="form-group mb-21">
+                            <label class="d-block">{{'addInfo2' | translate }}</label>
+                            <textarea class="ett-inpt h-auto bg-transparent text-light w-100 border-0 p-0 textarea" type="text" rows="1" formControlName="addInfo2"
+                                placeholder=" {{'addInfo2' | translate }}"></textarea>
+                        </div>  -->
+
+                        <div class="Cont mb-21">
+                            <button type="button" class="btn register-button mt-3" [disabled]="!registerForm.valid"
+                                type="submit">{{'continue' | translate }}
+                            </button>
+                        </div> 
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7  mr-0 pr-0 right-Section" id="rightSection ">
+                <h3 class="welcomeTxt m-0"><span>{{'welcomeText' | translate }}</span></h3>
+                <h2 class="subHeaderTxt d-block w-100"><span>{{'happyTxt' | translate }}</span></h2>
+                <h4 class="descriptionTxt"><span>{{'registerQuote' | translate }}</span></h4>
+            </div>
+        </div>
+    </div>
+</div>

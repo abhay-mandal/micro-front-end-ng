@@ -1,0 +1,117 @@
+.primaryAccountBox{ 
+    position: relative; 
+    margin: auto;
+}
+.primaryBoxShadow{
+    box-shadow: 0 0 5px 1px #ccc;
+    border-radius: 10px;
+    background: #FFF;
+    color: #333;
+    margin-bottom: 2em;
+}
+.subHeaderText{
+    color: #08182E;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.286em;
+}
+.subParaFont{
+    font-size: 13px;
+    color: #08182E;
+    font-weight: 300;
+    padding-left: 0;
+}
+.actionBtn{
+    font-size: 22px;
+    color: #FF6F20;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    background: transparent;
+    border-color: transparent;
+    border: 1px solid transparent;
+    line-height: 1.99em; 
+}
+a.actionBtn:hover{
+    color: #FF6F20;
+}
+.subActionBtn{
+    color: #FF6F20;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-position: under; 
+}
+a.subActionBtn:hover{
+    color: #FF6F20;
+}
+.iconsBoxShadow{
+    box-shadow: 0 0 5px 1px #ccc;
+    border-radius: 10px;
+    height: 19vh;
+    vertical-align: middle; 
+    max-width: 47.8% !important;
+}
+.iconFont{
+    font-weight: 400;
+    font-size: 16px;
+    color: inherit;
+}
+.iconImg {
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center; 
+    width: 52px;
+    height: 52px;
+} 
+.userNameSec{
+    margin-left: 1em;
+    font-size: 18px;
+}
+.headerHeight{
+    min-height: 80px;
+}
+.top10{
+    padding-top: 10px;
+}
+.userImg{
+    width: 50px;
+    height: 50px;
+}
+.rightAlign{
+    text-align: right;
+}
+.headerIconImg{
+    width: 65px; 
+    height: 60px;
+}
+.primaryBoxBottom{
+    margin-bottom:1.5em;
+}
+.dashboard-saved-Transaction-viewall div.card {
+    overflow: auto;
+    height: 52vh;
+
+} 
+.dashboard-saved-Transaction-viewall .card ul li h4{
+font-weight:500
+} 
+.dashboard-saved-Transaction-viewall .card ul li div div:first-child p{ 
+    font-size: 11px;
+    color:#808080;
+}
+.dashboard-saved-Transaction-viewall .card ul li div div:last-child p{ 
+    font-size: 14px;
+    font-weight: 500;
+    color: #000; 
+    
+}
+.dashboard-saved-Transaction-viewall .card ul li div div:last-child p:last-child{ 
+    width: 12%; 
+    font-size: 9px;
+    vertical-align: top;
+    font-weight: 400;
+} 
+
+
+    

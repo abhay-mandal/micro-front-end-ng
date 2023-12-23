@@ -1,0 +1,144 @@
+.search-bar-wrap {
+    right: 0;
+    top  : 0;
+}
+
+.new-payee {
+    background   : #F96D2B;
+    padding      : 14px 16px;
+    border-radius: 50%;
+    color        : #fff;
+    background   : #FF6F20;
+    box-shadow   : 0px 4px 10px rgba(0, 0, 0, 0.24);
+    height       : 2.75rem;
+    min-width    : 2.75rem;
+    border-radius: 31.25rem;
+    cursor       : pointer;
+}
+
+.circle {
+    width        : 45px;
+    height       : 45px;
+    border-radius: 50%;
+}
+
+
+.form-control.pl-5.search-input {
+    box-shadow   : 0px 1px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 6px;
+    color        : #808080;
+    font-size    : 14px;
+    font-weight  : 300;
+    min-width    : 250px;
+    height       : 45px;
+    margin-right : 42px;
+}
+
+.dashboard-fundtransfer .card {
+    box-shadow   : 0px 3px 6px rgba(0, 0, 0, 0.10);
+    border       : 1px solid #E5E5E5;
+    border-radius: 10px;
+    margin       : 10px 0;
+    padding      : 16px;
+}
+
+.fa-search::before {
+    font-size: 20px !important;
+    color    : #808080 !important;
+}
+
+::ng-deep {
+    .nav-pills li a.nav-link.active {
+        background-color: transparent;
+        color           : #FF6F20;
+        text-decoration : underline;
+    }
+
+    .nav-pills {
+        margin-bottom: 14px;
+    }
+
+    .nav-pills>li:last-child {
+        border: none;
+    }
+
+    .nav-pills>li a:first-child {
+        padding-left: 0px;
+    }
+
+    .nav-pills>li a {
+        padding    : 0 25px;
+        color      : #08182E;
+        font-size  : 18px;
+        font-weight: 400;
+    }
+
+    .nav-pills>li a:hover {
+        color      : #08182E;
+        font-size  : 18px;
+        font-weight: 400;
+    }
+
+    .nav-pills>li {
+        border-right : 2px solid #08182E;
+        border-radius: 0;
+        height       : 20px;
+        margin-right : 20px;
+        margin-bottom: 14px;
+        margin-top   : 12px;
+    }
+}
+
+.dashboard-fundtransfer .card-body li:first-child::after,
+.dashboard-fundtransfer .card-body li:nth-child(2)::after {
+    border-top: 0;
+    content   : " ";
+}
+
+
+.dashboard-fundtransfer .card .card-body li:first-child,
+.dashboard-fundtransfer .card .card-body li:nth-child(2) {
+    border-top: 0;
+}
+
+.dashboard-fundtransfer .card-body li {
+    max-width: 48%;
+    margin   : 0 1% 17px;
+    position : relative;
+    cursor   : pointer;
+}
+
+.dashboard-fundtransfer .card-body li div:nth-child(2) h4 {
+    color      : #08182E;
+    font-weight: 400;
+    font-size  : 15px;
+
+}
+
+.dashboard-fundtransfer .card-body li div:nth-child(2) p {
+    color      : #A3A3A3;
+    font-weight: 300;
+    font-size  : 14px;
+}
+
+
+.dashboard-fundtransfer .card-body li:after {
+    content   : '';
+    width     : 1px;
+    height    : 20px;
+    position  : absolute;
+    background: #e5e5e5;
+    top       : 67px;
+    right     : 0;
+
+}
+
+.dashboard-heading {
+    color      : #08182E;
+    font-weight: 500;
+    font-size  : 28px;
+}
+
+.main-panel {
+    width: 100%
+}

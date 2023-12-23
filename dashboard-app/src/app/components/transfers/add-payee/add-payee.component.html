@@ -1,0 +1,33 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-arrowleft" viewBox="0 0 31 32">
+      <title>arrowleft</title>
+      <path d="M15.717 32.106l-15.785-16.072 15.785-16.072 2.583 2.583-13.202 13.489 13.202 13.489z"></path>
+      <path d="M4.094 13.882h26.978v3.587h-26.978v-3.587z"></path>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 30 32">
+      <title>calendar</title>
+      <path fill="#359782" style="fill: var(--color1, #359782);stroke : green"
+        d="M29.038 2.534h-3.664v-1.588c0-0.244-0.244-0.489-0.489-0.489 0 0 0 0 0 0h-3.664c-0.244 0-0.489 0.244-0.489 0.489 0 0 0 0 0 0v1.588h-11.481v-1.588c0-0.244-0.244-0.489-0.489-0.489h-3.664c-0.244 0-0.489 0.244-0.489 0.489 0 0 0 0 0 0v1.588h-3.664c-0.244 0-0.489 0.244-0.489 0.489 0 0 0 0 0 0v27.969c0 0.244 0.244 0.489 0.489 0.489 0 0 0 0 0 0h27.969c0.244 0 0.489-0.244 0.489-0.489 0 0 0 0 0 0v-27.969c0.122-0.244-0.122-0.489-0.366-0.489 0 0 0 0 0 0zM21.71 1.557h2.565v3.176h-2.565v-3.176zM5.588 1.557h2.565v3.176h-2.565v-3.176zM1.435 3.634h3.176v1.588c0 0.244 0.244 0.489 0.489 0.489 0 0 0 0 0 0h3.664c0.244 0 0.489-0.244 0.489-0.489 0 0 0 0 0 0v-1.71h11.359v1.588c0 0.244 0.244 0.489 0.489 0.489 0 0 0 0 0 0h3.664c0.244 0 0.489-0.244 0.489-0.489 0 0 0 0 0 0v-1.588h3.053v4.641h-26.87v-4.519zM1.435 30.504v-21.252h26.992v21.252h-26.992z">
+      </path>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="row header-bakground m-0 add-payee-header py-2 mb-5">
+  <div (click) = "navigateToFundTransfer()" class="col-md-1 d-flex justify-content-end pl-0 pt-2 mx-wid50px">
+    <svg class="icon-arrowleft">
+      <use xlink:href="#icon-arrowleft"></use>
+    </svg>
+  </div>
+  <div class="col-md-11 p-0 pt-1 pl-2">
+    <h6 class="text-white ">{{ 'fundTransfer.addpayeeLabel' | translate}}</h6>
+  </div>
+</div>
+<div class="row m-0 mt-4">
+  <div class="col-md-10 my-0 mx-auto">
+    <app-dynamic-form [formJSON]="formTemplate[0].page.formField" [bankCodes]="bankCodes"
+      (saveEmitter)="saveOutput($event)"></app-dynamic-form>
+  </div>
+</div>

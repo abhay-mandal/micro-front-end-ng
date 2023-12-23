@@ -1,0 +1,306 @@
+::ng-deep{
+  select{
+    width: -webkit-fill-available;
+  }
+  .height75px{
+    height: 75px;
+  }
+  .disp-Content{
+    display:contents
+  }
+  .wid190px{
+    width:190px
+  }
+    .neft-transfer-tab .nav-item a > span {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        border: 1px solid #484848;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 8px;
+    }
+    .neft-transfer-tab .nav-item a > label {
+        color: #565656;
+    }
+    .neft-transfer-tab .nav-item a.active > span::after{
+        content: " ";
+        display: block;
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        background-color: #289057;
+        border: 4px solid #fff;
+        position: absolute;
+        left: 0;
+        top:0;
+        border-radius: 50%;
+    }
+    .neft-transfer-tab .nav-item a.active > span {
+        border: 5px inset #f8f9fa;
+        position: relative;
+        background: #289057;
+        border-style: double;
+        border: 1px solid #484848;
+    }
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+        background-color: transparent;
+        color: #565656;
+    }
+    .labClass{ 
+        color:#ca520a;
+        font-weight: 300;
+        font-size: 14px; 
+        margin-bottom: 0;
+    }
+    .labClass:hover{
+        color:#ca520a;
+    } 
+// radio css
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #565656;
+  }
+  
+  
+  .custom-control-input:checked ~ .custom-control-label.green::before {
+    background-color: #359782;
+    background-image: none;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 0;
+    border: 1px solid #666;
+    width:24px;
+    height: 24px;
+    box-shadow: none;
+  } 
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::after{
+    background-color: #359782;
+    width: 16px;
+    height: 16px;
+    z-index: 9;
+    left: -20px;
+    top: 8px;
+    border-radius: 50%;
+    background-image: none;
+  }
+  .custom-control-label::before{ 
+    width: 24px;
+    height: 24px;
+    border:1px solid #666;
+  }
+  .custom-control-label{
+    cursor: pointer;
+    padding-left: 5px;
+    vertical-align: bottom;
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before{
+      box-shadow:none;
+      background-color: #fff;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before,
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before{
+    border: 1px solid #666;
+    box-shadow:none;
+  }
+  .form-control {
+    height: 32px; 
+    font-size: 14px;
+    padding: 4px 5px;
+    font-weight: 300;
+}
+
+
+
+.btn-save:active,
+.btn-save:not(:disabled):not(.disabled).active,
+.btn-save:focus{
+   background-color:#f16320 ;
+   border: 0;
+   box-shadow: none;
+   color:#fff 
+ }
+ .btn-cancel:not(:disabled):not(.disabled):active,
+ .btn-cancel:not(:disabled):not(.disabled).active,
+ .btn-cancel .btn-save{
+  background-color: #ccc;
+  border: 0;
+  box-shadow: none;
+  color: #333;
+ }
+.btn-save {
+  background: #f16320;
+  border: 0;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 13px;
+    padding: 8px 16px;
+    min-width: 150px;
+    max-width: 150px;
+}
+.btn-save:hover,.btn-save:focus,.btn-save:active{
+  background-color: #f16320;
+  border:0;
+  color: #fff;
+}
+
+
+.btn-cancel {
+  background: #ccc;
+  border: 0;
+  color: #333;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 13px;
+    padding: 8px 16px;
+    min-width: 150px;
+    max-width: 150px;
+}
+.btn-cancel:hover{
+  background-color: #ccc;
+  color: #333;
+}
+
+    
+}
+.neft-label,.labClass{ 
+    color:#ca520a;
+    font-weight: 300;
+    font-size: 14px; 
+}
+.neft-label:hover,.labClass:hover{
+    color:#ca520a;
+} 
+.underline-none{ 
+    text-decoration: none !important;
+}
+.neft-label-green{
+    color:#03b083;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.neft-label-green:hover{
+    color:#03b083;
+}
+.header-bakground{
+    background-color: #359782;
+}
+svg{
+        width: 14px;
+        height: 14px;
+        fill: white; 
+}
+.neft-transfer-header .text-white {
+    font-weight: 300;
+}
+.mx-wid50px{
+    max-width: 50px;
+}
+.neft-from-account{
+    background-color: #ccc;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #565656;
+  }
+  
+  
+  .custom-control-input:checked ~ .custom-control-label.green::before {
+    background-color: #359782;
+    background-image: none;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 0;
+    border: 1px solid #666;
+    width:24px;
+    height: 24px;
+    box-shadow: none;
+  } 
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::after{
+    background-color: #359782;
+    width: 16px;
+    height: 16px;
+    z-index: 9;
+    left: -20px;
+    top: 8px;
+    border-radius: 50%;
+    background-image: none;
+  }
+  .custom-control-label::before{ 
+    width: 24px;
+    height: 24px;
+    border:1px solid #666;
+  }
+  .custom-control-label{
+    cursor: pointer;
+    padding-left: 5px;
+    vertical-align: bottom;
+    line-height: 28px;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before{
+      box-shadow:none;
+      background-color: #fff;
+  }
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before,
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before{
+    border: 1px solid #666;
+    box-shadow:none;
+  }
+  .neft-acc-intial{
+    max-width: 40px;
+    min-width: 40px;
+  }
+  .neft-acc-intial > span{
+    background-color: #ccc;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-weight: 400;
+    display: block;
+    padding: 4px 6px;
+  }
+  .cursor-pointer{
+      cursor: pointer;
+  }
+  .curr-dropdown > .btn {
+    border: 1px solid #ccc;
+    text-align: start;
+}
+.curr-dropdown > .btn:hover {
+background-color: none; 
+}
+.curr-dropdown > .btn:active,.curr-dropdown > .btn:focus{
+    box-shadow: none;
+    outline: 0;
+
+}
+.dropdown-toggle::after{
+    float: right;
+    margin-top:10px
+}
+.curr-dropdown.show .dropdown-toggle::after{
+transform: rotate(180deg);
+}
+textarea{
+    resize:none
+}
+
+.calendar > a {
+    right: 8px;
+    top: 0px;
+    font-size: 11px;
+}
+.date-field{
+  fill:#359782;
+}
+.btn.disabled, .btn:disabled{
+  cursor:not-allowed
+}

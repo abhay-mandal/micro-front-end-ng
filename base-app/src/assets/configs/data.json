@@ -1,0 +1,13 @@
+    {
+        "BEARER_TOKEN": "d76b4327-832b-3030-adf4-32c8cd3317d3",
+        "API_BODY": {
+            "DEVICE_ID": "WEB",
+            "TENANT_ID": "admin",
+            "APP_ID": "Admin",
+            "REQUEST_ID": "CSNONCE",
+            "OS": "WEB",
+            "EXTERNAL_REF_ID": "ab12sd13",
+            "CHECK_SUM": "7991f33ddded9b04a0c02f1f2240c56fb4ff996f813c4cd2611a57037435268e",
+            "REQ_ID": "PROC_2"
+        }
+    }

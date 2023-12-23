@@ -1,73 +1,47 @@
-<nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark p-0">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">XACBANK</a>
-
-  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">Settings</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-        </div>
-      </li>
-    </ul>
+<ng-container *ngIf="!isUserAuthorized; else microAppContainer">
+  <div id="loginContainer" #loginContainer>
+    <!-- Login app goes here -->
   </div>
-</nav>
+</ng-container>
+<ng-template #microAppContainer>
 
-<div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <!-- <li class="nav-item"><a class="nav-link active" href="#/app-people/people">People</a></li>
-          <li class="nav-item"><a class="nav-link" href="#/app-login/login">Login</a></li> -->
-          
-          <li class="nav-item"><a class="nav-link" href="javascript:void(0)" (click)="load('app-people')">People</a></li>
-          <li class="nav-item"><a class="nav-link" href="javascript:void(0)" (click)="load('app-login')">Login</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-3">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-3">
-        <div class="main-panel">
-          <div id="appContainer">
-            <!-- Web Components go here -->
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 pl-4 sidebar">
+        <div class="sidebar-sticky">
+          <div class="pl-3 pt-5 mb-4">
+            <figure>
+              <img class="xac-logo" alt="XAC Bank Logo" src="./assets/image/xaclogo-white.svg" />
+            </figure>
           </div>
-
-          <!-- <ng-container *ngIf="isBaseAppRoutes; else microAppContainer">
-            <div id="base-container">
-              <h3>Dashboard</h3>
-            </div>
-          </ng-container>
-          <ng-template #microAppContainer>
-            <div id="appContainer">
-               ---- Web Components go here ---
-            </div>
-          </ng-template> -->
+          <ul class="nav flex-column">
+            <!-- <li class="nav-item"><a class="nav-link active" href="#/app-people/people">People</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="#/app-dashboard/fund-transfer">Fund transfer</a>
+          </li>
+          </ul>
         </div>
-      </div>
-    </main>
+      </nav>
+      <main role="main" class="col-md-9 pt-2 px-4 mt-5 microApp-frame-height">
+        <nav class="navbar navbar-expand-md pos-fixed-top0px bg-white p-0 navbar-top">
+          <div class="navbar-brand col-sm-3 col-md-2 pl-0">
+            <a class="" href="javascript:void(0)">Hi User</a>
+          </div> 
+          <div class="navbar-collapse offcanvas-collapse col-sm-9 col-md-10 pl-0" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="javascript:void(0);" (click)="logout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap pb-2 mb-3">
+          <div class="main-panel w-100">
+            <div id="appContainer" #appContainer>
+              <!-- Web Components goes here -->
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </div>
-</div>
-
-
-<!-- <nav>
-  <ul>
-    <li><a href="javascript:void(0)" (click)="load('app-list-people')">People</a></li>
-    <li><a href="javascript:void(0)" (click)="load('micro-app-login')">Login</a></li>
-
-    <li><a href="#/app-people/list">People</a></li>
-    <li><a href="#/auth/login">Login</a></li>
-    
-  </ul>
-</nav> -->
-
-<!-- <router-outlet></router-outlet> -->
+</ng-template>

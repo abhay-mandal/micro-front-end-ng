@@ -1,0 +1,95 @@
+<div class="">
+  <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <ng-container *ngFor="let formElem of formJSON">
+
+        <div class=" center mb-4" [ngClass]="formElem.ui.class">
+          <div [ngSwitch]="formElem.type">
+
+            <div *ngSwitchCase="'textBox'" class="text-box">
+              <label class="labClass" for="textId">{{formElem.ui.label}}</label>
+              <div class="input-group">
+                <input name="{{formElem.ui.label}}" autocomplete="off" placeholder="{{formElem.ui.placeholder}}"
+                  formControlName="{{formElem.key}}" value="{{formElem.value}}" [ngClass]="{ 'form-control':true }"
+                  id="textId" type="{{formElem.controlType}}" />
+                <div *ngIf="formElem.ui?.inputGroup" class="input-group-append position-relative">
+                  <a href="javascript:void(0)" class="input-group-text find-bank-code"
+                    (click)="toggleExtraInputField()">{{formElem.ui?.inputGroup}}</a>
+
+                  <div *ngIf="isShowExtraInputField" class="position-absolute">
+                    <select (change)="handleChange($event.target.value, formElem.key)"
+                      class="form-control custom-select">
+                      <option disabled selected value> --select an option-- </option>
+                      <option *ngFor="let code of bankCodes" [value]="code.value"> {{ code.key }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngFor="let validation of formElem.validations.ui">
+                <label class="text-danger"
+                  *ngIf="form[formElem.key].touched && form[formElem.key].hasError(validation.name)">{{validation.message}}</label>
+              </div>
+
+            </div>
+
+            <div *ngSwitchCase="'select'" class="select-box">
+              <label class="labClass" for="textId">{{formElem.key}}</label><br>
+              <select class="form-control custom-select" 
+                formControlName="{{formElem.key}}">
+                <option disabled selected value> -- select an option -- </option>
+                <option *ngFor="let option of formElem.options">
+                  {{option.key}}
+                </option>
+              </select>
+            </div>
+
+            <div *ngSwitchCase="'radioButton'" class="form-group">
+              <label   for="textIdxx">{{formElem.ui.label}}</label>
+              <div class="row m-0">
+                <div class="col-md-auto custom-control custom-radio custom-control-inline mr-0"
+                  *ngFor='let item of formElem.options;let i = index'>
+                  <input class="custom-control-input" id="{{item.value}}" formControlName="{{formElem.key}}"
+                    type="radio" name="{{formElem.key}}" [value]="item.value">
+                  <label for="{{item.value}}" class="radLabel custom-control-label green"
+                    type="text">{{item.key}}</label>
+                </div>
+              </div>
+            </div>
+
+            <div *ngSwitchCase="'checkBox'" >
+              <label   for="textIdxx">{{formElem.key}}</label>
+              <div class="row">
+                <div class="col-md-4 disp-Content wid190px"  
+                  *ngFor="let order of formElem.options; let i = index">
+                  <label for="{{order.key}}" class="radio-label">
+                    <input class="form-control" formControlName="{{formElem.key}}" id="{{order.key}}" type="checkbox"
+                      value="{{order.key}}">
+                    {{order.key}}
+                  </label>
+                </div>
+              </div>
+
+              <div *ngFor="let validation of formElem.validations.ui,let i= index">
+                <label class="text-danger"
+                  *ngIf="i == 0 && submitted && myFormGroup.get(formElem.ui.label).hasError(validation.name)">{{validation.message}}</label>
+              </div>
+            </div>
+
+            
+            <div *ngSwitchCase="'button'">
+              <ng-container *ngFor="let button of formElem.buttons">
+                <button *ngIf="button?.type == 'submit' || button?.type == 'submit'" [disabled]="myFormGroup.invalid"
+                  class="btn" [ngClass]="button.ui.class" type="{{button.type}}">{{button.ui.label}}</button>
+                <button *ngIf="button?.type == 'button'" (click)="clearForm()" class="btn" [ngClass]="button.ui.class"
+                  type="{{button.type}}">{{button.ui.label}}</button>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+
+  </form>
+</div>
